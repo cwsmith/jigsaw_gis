@@ -41,7 +41,7 @@ def gis(src_path, dst_path):
 
     opts.optm_qlim = +.9375
 
-    opts.mesh_top2 = True               # for sharp feat's
+    opts.mesh_top2 = False               # for sharp feat's
     opts.geom_feat = True
     opts.geom_eta1 = float(+10.0)
     opts.geom_eta2 = float(+10.0)
