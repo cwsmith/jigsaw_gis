@@ -1,0 +1,176 @@
+Call libJIGSAW: gis
+Saving gis.vtk file.
+ 
+#------------------------------------------------------------
+#
+#   ,o, ,o,       /                                 
+#    `   `  e88~88e  d88~\   /~~~8e Y88b    e    / 
+#   888 888 88   88 C888         88b Y88b  d8b  /   
+#   888 888 "8b_d8"  Y88b   e88~-888  Y888/Y88b/  
+#   888 888  /        888D C88   888   Y8/  Y8/     
+#   88P 888 Cb      \_88P   "8b_-888    Y    Y    
+# \_8"       Y8""8D                             
+#
+#------------------------------------------------------------
+# JIGSAW: an unstructured mesh generation library.  
+#------------------------------------------------------------
+ 
+  JIGSAW VERSION 1.0.0
+
+  Reading CFG. data...
+
+  CFG. data summary...
+
+  GEOM-FILE = 
+  MESH-FILE = 
+  HFUN-FILE = 
+  INIT-FILE = 
+  TRIA-FILE = 
+  BNDS-FILE = 
+
+  NUMTHREAD = 20
+
+  GEOM-SEED = 8
+  GEOM-PHI1 = 6.00e+01
+  GEOM-PHI2 = 6.00e+01
+  GEOM-ETA1 = 5.00e+00
+  GEOM-ETA2 = 5.00e+00
+  GEOM-FEAT = TRUE
+
+  INIT-NEAR = 1.00e-08
+
+  HFUN-SCAL = ABSOLUTE 
+  HFUN-HMAX = inf
+  HFUN-HMIN = 0.00e+00
+
+  BNDS-KERN = BND-TRIA 
+  MESH-KERN = DELFRONT 
+  MESH-TOP1 = FALSE
+  MESH-TOP2 = FALSE
+  MESH-ITER = MAXINT
+  MESH-DIMS = 2
+  MESH-SIZ1 = 1.33e+00
+  MESH-SIZ2 = 1.31e+00
+  MESH-SIZ2 = 1.30e+00
+  MESH-EPS1 = 3.33e-01
+  MESH-EPS2 = 3.33e-01
+  MESH-RAD2 = 1.05e+00
+  MESH-RAD3 = 2.05e+00
+  MESH-OFF2 = 9.00e-01
+  MESH-OFF3 = 1.10e+00
+  MESH-SNK2 = 2.00e-01
+  MESH-SNK3 = 3.33e-01
+  MESH-VOL3 = 0.00e+00
+
+  OPTM-KERN = ODT+DQDX 
+  OPTM-ITER = 16
+  OPTM-COST = AREA-LEN 
+  OPTM-BETA = 4.95e-01
+  OPTM-ZETA = 8.25e-01
+  OPTM-QTOL = 1.00e-04
+  OPTM-QLIM = 9.38e-01
+  OPTM-ZIP_ = TRUE
+  OPTM-DIV_ = TRUE
+  OPTM-TRIA = TRUE
+  OPTM-DUAL = FALSE
+
+  Done. (2.80e-05sec)
+
+#------------------------------------------------------------
+
+  Reading GEOM data...
+
+  Done. (3.58e-04sec)
+
+#------------------------------------------------------------
+
+  Forming GEOM data...
+
+  GEOM data summary...
+
+  EUCLIDEAN-MESH
+
+  |NDIMS.| = 2
+
+  |COORD.| = 16675
+  |EDGE-2| = 16674
+
+  |SEEDS.| = 0
+
+  |BOUND.| = 0 (0) 
+
+  Done. (3.73e-03sec)
+
+#------------------------------------------------------------
+
+  Reading HFUN data...
+
+  Done. (1.69e-03sec)
+
+#------------------------------------------------------------
+
+  Forming HFUN data...
+
+  HFUN data summary...
+
+  EUCLIDEAN-GRID
+
+  |NDIMS.| = 2
+
+  .MIN(H). = 3.00e+03
+  .MAX(H). = 3.00e+04
+  
+  |MASKED| = 0
+  
+  |XGRID.| = 832
+  |YGRID.| = 1408
+
+  Done. (1.08e-03sec)
+
+#------------------------------------------------------------
+
+  Generate rDT MESH...
+
+#------------------------------------------------------------
+#    |ITER.|      |DEL-1|      |DEL-2| 
+#------------------------------------------------------------
+      10000        13891        31158
+      25000        13891        61158
+      50000        13891       111158
+      75000        13891       161152
+     100000        14193       210521
+     174680        22911       349882
+
+  Done. (8.56e+00sec)
+
+#------------------------------------------------------------
+
+  Forming MESH data...
+
+  Done. (1.81e-01sec)
+
+#------------------------------------------------------------
+
+  MESH optimisation...
+
+#------------------------------------------------------------
+#    |MOVE.|      |FLIP.|      |MERGE|      |SPLIT| 
+#------------------------------------------------------------
+     157325         1009         5174          350
+     153527           84          866            8
+     140104           11          126            0
+     114986            2           35            0
+      44012            0            2            0
+       8507            0            1            0
+        821            0            0            0
+          4            0            0            0
+          0            0            0            0
+
+  Done. (1.03e+01sec)
+
+#------------------------------------------------------------
+
+  Writing MESH data...
+
+  Done. (1.48e-02sec)
+
