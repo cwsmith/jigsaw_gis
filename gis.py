@@ -32,6 +32,7 @@ def gis(src_path, dst_path):
 
     print("Call libJIGSAW: gis")
 
+    opts.verbosity = +1
     opts.hfun_scal = "absolute"
     opts.hfun_hmax = float("inf")
     opts.hfun_hmin = float(0.0)
@@ -42,6 +43,8 @@ def gis(src_path, dst_path):
 
     opts.mesh_top2 = True               # for sharp feat's
     opts.geom_feat = True
+    opts.geom_eta1 = float(+10.0)
+    opts.geom_eta2 = float(+10.0)
 
     jigsawpy.lib.jigsaw(opts, geom, mesh, hfun=hfun)
 
