@@ -1,0 +1,146 @@
+Call libJIGSAW: gis
+ 
+#------------------------------------------------------------
+#
+#   ,o, ,o,       /                                 
+#    `   `  e88~88e  d88~\   /~~~8e Y88b    e    / 
+#   888 888 88   88 C888         88b Y88b  d8b  /   
+#   888 888 "8b_d8"  Y88b   e88~-888  Y888/Y88b/  
+#   888 888  /        888D C88   888   Y8/  Y8/     
+#   88P 888 Cb      \_88P   "8b_-888    Y    Y    
+# \_8"       Y8""8D                             
+#
+#------------------------------------------------------------
+# JIGSAW: an unstructured mesh generation library.  
+#------------------------------------------------------------
+ 
+  JIGSAW VERSION 1.0.0
+
+  Reading CFG. data...
+
+  CFG. data summary...
+
+  GEOM-FILE = 
+  MESH-FILE = 
+  HFUN-FILE = 
+  INIT-FILE = 
+  TRIA-FILE = 
+  BNDS-FILE = 
+
+  NUMTHREAD = 20
+
+  GEOM-SEED = 8
+  GEOM-PHI1 = 6.00e+01
+  GEOM-PHI2 = 6.00e+01
+  GEOM-ETA1 = 5.00e+00
+  GEOM-ETA2 = 5.00e+00
+  GEOM-FEAT = TRUE
+
+  INIT-NEAR = 1.00e-08
+
+  HFUN-SCAL = RELATIVE 
+  HFUN-HMAX = 2.00e-02
+  HFUN-HMIN = 0.00e+00
+
+  BNDS-KERN = BND-TRIA 
+  MESH-KERN = DELFRONT 
+  MESH-TOP1 = TRUE
+  MESH-TOP2 = FALSE
+  MESH-ITER = MAXINT
+  MESH-DIMS = 2
+  MESH-SIZ1 = 1.33e+00
+  MESH-SIZ2 = 1.31e+00
+  MESH-SIZ2 = 1.30e+00
+  MESH-EPS1 = 3.33e-01
+  MESH-EPS2 = 3.33e-01
+  MESH-RAD2 = 1.05e+00
+  MESH-RAD3 = 2.05e+00
+  MESH-OFF2 = 9.00e-01
+  MESH-OFF3 = 1.10e+00
+  MESH-SNK2 = 2.00e-01
+  MESH-SNK3 = 3.33e-01
+  MESH-VOL3 = 0.00e+00
+
+  OPTM-KERN = ODT+DQDX 
+  OPTM-ITER = 16
+  OPTM-COST = AREA-LEN 
+  OPTM-BETA = 4.95e-01
+  OPTM-ZETA = 8.25e-01
+  OPTM-QTOL = 1.00e-04
+  OPTM-QLIM = 9.38e-01
+  OPTM-ZIP_ = TRUE
+  OPTM-DIV_ = TRUE
+  OPTM-TRIA = TRUE
+  OPTM-DUAL = FALSE
+
+  Done. (5.70e-05sec)
+
+#------------------------------------------------------------
+
+  Reading GEOM data...
+
+  Done. (1.44e-03sec)
+
+#------------------------------------------------------------
+
+  Forming GEOM data...
+
+  GEOM data summary...
+
+  EUCLIDEAN-MESH
+
+  |NDIMS.| = 2
+
+  |COORD.| = 16675
+  |EDGE-2| = 16674
+
+  |SEEDS.| = 0
+
+  |BOUND.| = 1 (4) 
+
+  Done. (5.79e-03sec)
+
+#------------------------------------------------------------
+
+  Forming HFUN data...
+
+  HFUN data summary...
+
+  CONSTANT-VALUE
+
+  .VAL(H). = 4.48e+04
+
+  Done. (1.50e-05sec)
+
+#------------------------------------------------------------
+
+  Generate rDT MESH...
+
+#------------------------------------------------------------
+#    |ITER.|      |DEL-1|      |DEL-2| 
+#------------------------------------------------------------
+      10000        16396        44142
+      25000        20256        66884
+      50000        21998       112894
+      75000        23102       158874
+     100000        23106       172368
+     250000        23227       248782
+     500000        23262       373600
+     750000        23336       499234
+    1000000        23433       622448
+    2500000        23623      1364784
+    5000000        23878      2593870
+    7500000        23938      3820714
+   10000000        24018      5042344
+   25000000        24382     12389788
+   50000000        25503     24607034
+   75000000        26019     36816924
+  100000000        26083     48996726
+  250000000        27152    122133524
+  500000000        27983    244105756
+  750000000        29313    365931754
+ 1000000000        30773    487695528
+ 1057549056        31083    515796692
+ 1410065408        34344    687454956
+
+# 35+ mins wall time, 60GB of memory
