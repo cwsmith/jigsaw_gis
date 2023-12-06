@@ -18,14 +18,12 @@ def gis(src_path, dst_path):
     opts = jigsawpy.jigsaw_jig_t()
     geom = jigsawpy.jigsaw_msh_t()
     mesh = jigsawpy.jigsaw_msh_t()
-    hfun = jigsawpy.jigsaw_msh_t()
 
 #------------------------------------ define JIGSAW geometry
 
     geom.mshID = "euclidean-mesh"
     geom.ndims = +2
     jigsawpy.loadmsh("mesh.msh", geom)
-    jigsawpy.loadmsh("mesh-HFUN.msh", hfun)
     
 
 #------------------------------------ build mesh via JIGSAW!
@@ -33,19 +31,17 @@ def gis(src_path, dst_path):
     print("Call libJIGSAW: gis")
 
     opts.verbosity = +1
-    opts.hfun_scal = "absolute"
-    opts.hfun_hmax = float("inf")
-    opts.hfun_hmin = float(0.0)
 
     opts.mesh_dims = +2                 # 2-dim. simplexes
 
     opts.optm_qlim = +.9375
 
+    opts.mesh_top1 = True
     opts.geom_feat = True
     opts.geom_eta1 = float(+5.0)
     opts.geom_eta2 = float(+5.0)
 
-    jigsawpy.lib.jigsaw(opts, geom, mesh, hfun=hfun)
+    jigsawpy.lib.jigsaw(opts, geom, mesh)
 
     scr2 = jigsawpy.triscr2(            # "quality" metric
         mesh.point["coord"],
