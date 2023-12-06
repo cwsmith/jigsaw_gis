@@ -1,0 +1,159 @@
+Call libJIGSAW: gis
+ 
+#------------------------------------------------------------
+#
+#   ,o, ,o,       /                                 
+#    `   `  e88~88e  d88~\   /~~~8e Y88b    e    / 
+#   888 888 88   88 C888         88b Y88b  d8b  /   
+#   888 888 "8b_d8"  Y88b   e88~-888  Y888/Y88b/  
+#   888 888  /        888D C88   888   Y8/  Y8/     
+#   88P 888 Cb      \_88P   "8b_-888    Y    Y    
+# \_8"       Y8""8D                             
+#
+#------------------------------------------------------------
+# JIGSAW: an unstructured mesh generation library.  
+#------------------------------------------------------------
+ 
+  JIGSAW VERSION 1.0.0
+
+  Reading CFG. data...
+
+  CFG. data summary...
+
+  GEOM-FILE = 
+  MESH-FILE = 
+  HFUN-FILE = 
+  INIT-FILE = 
+  TRIA-FILE = 
+  BNDS-FILE = 
+
+  NUMTHREAD = 20
+
+  GEOM-SEED = 8
+  GEOM-PHI1 = 6.00e+01
+  GEOM-PHI2 = 6.00e+01
+  GEOM-ETA1 = 4.50e+01
+  GEOM-ETA2 = 4.50e+01
+  GEOM-FEAT = FALSE
+
+  INIT-NEAR = 1.00e-08
+
+  HFUN-SCAL = RELATIVE 
+  HFUN-HMAX = 2.00e-02
+  HFUN-HMIN = 0.00e+00
+
+  BNDS-KERN = BND-TRIA 
+  MESH-KERN = DELFRONT 
+  MESH-TOP1 = TRUE
+  MESH-TOP2 = FALSE
+  MESH-ITER = MAXINT
+  MESH-DIMS = 2
+  MESH-SIZ1 = 1.33e+00
+  MESH-SIZ2 = 1.31e+00
+  MESH-SIZ2 = 1.30e+00
+  MESH-EPS1 = 3.33e-01
+  MESH-EPS2 = 3.33e-01
+  MESH-RAD2 = 1.05e+00
+  MESH-RAD3 = 2.05e+00
+  MESH-OFF2 = 9.00e-01
+  MESH-OFF3 = 1.10e+00
+  MESH-SNK2 = 2.00e-01
+  MESH-SNK3 = 3.33e-01
+  MESH-VOL3 = 0.00e+00
+
+  OPTM-KERN = ODT+DQDX 
+  OPTM-ITER = 16
+  OPTM-COST = AREA-LEN 
+  OPTM-BETA = 4.95e-01
+  OPTM-ZETA = 8.25e-01
+  OPTM-QTOL = 1.00e-04
+  OPTM-QLIM = 9.38e-01
+  OPTM-ZIP_ = TRUE
+  OPTM-DIV_ = TRUE
+  OPTM-TRIA = TRUE
+  OPTM-DUAL = FALSE
+
+  Done. (5.80e-05sec)
+
+#------------------------------------------------------------
+
+  Reading GEOM data...
+
+  Done. (1.48e-03sec)
+
+#------------------------------------------------------------
+
+  Forming GEOM data...
+
+  GEOM data summary...
+
+  EUCLIDEAN-MESH
+
+  |NDIMS.| = 2
+
+  |COORD.| = 16675
+  |EDGE-2| = 16674
+
+  |SEEDS.| = 0
+
+  |BOUND.| = 1 (4) 
+
+  Done. (7.12e-03sec)
+
+#------------------------------------------------------------
+
+  Forming HFUN data...
+
+  HFUN data summary...
+
+  CONSTANT-VALUE
+
+  .VAL(H). = 4.48e+04
+
+  Done. (2.80e-05sec)
+
+#------------------------------------------------------------
+
+  Generate rDT MESH...
+
+#------------------------------------------------------------
+#    |ITER.|      |DEL-1|      |DEL-2| 
+#------------------------------------------------------------
+      10000         4615        18742
+      25000         8148        47442
+      44712        10739        85481
+
+  Done. (3.41e-01sec)
+
+#------------------------------------------------------------
+
+  Forming MESH data...
+
+  Done. (3.51e-02sec)
+
+#------------------------------------------------------------
+
+  MESH optimisation...
+
+#------------------------------------------------------------
+#    |MOVE.|      |FLIP.|      |MERGE|      |SPLIT| 
+#------------------------------------------------------------
+      24702          546         1743           30
+      22153           51          233            1
+      18145            9           32            0
+      10813            2            8            0
+       2415            0            2            0
+        191            0            0            0
+          0            0            0            0
+
+  Done. (2.12e+00sec)
+
+#------------------------------------------------------------
+
+  Writing MESH data...
+
+  Done. (3.14e-03sec)
+
+/space/cwsmith/compassLandice/jigsaw-python/pyEnv/lib/python3.10/site-packages/jigsawpy-1.0.0-py3.10.egg/jigsawpy/tools/scorecard.py:45: RuntimeWarning: invalid value encountered in divide
+  return (scal * area / lrms)
+Saving gis.vtk file.
