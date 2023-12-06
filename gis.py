@@ -37,9 +37,6 @@ def gis(src_path, dst_path):
     opts.optm_qlim = +.9375
 
     opts.mesh_top1 = True
-    opts.geom_feat = True
-    opts.geom_eta1 = float(+5.0)
-    opts.geom_eta2 = float(+5.0)
 
     jigsawpy.lib.jigsaw(opts, geom, mesh)
 
