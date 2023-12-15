@@ -24,7 +24,7 @@ def gis(src_path, dst_path):
 
     geom.mshID = "euclidean-mesh"
     geom.ndims = +2
-    jigsawpy.loadmsh("mesh.msh", geom)
+    jigsawpy.loadmsh("mesh_12_14.msh", geom)
     jigsawpy.loadmsh("mesh-HFUN.msh", hfun)
     
 
