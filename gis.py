@@ -24,7 +24,7 @@ def gis(src_path, dst_path):
 
     geom.mshID = "euclidean-mesh"
     geom.ndims = +2
-    jigsawpy.loadmsh("mesh_12_14.msh", geom)
+    jigsawpy.loadmsh("mesh_12_14_withBdry.msh", geom)
     jigsawpy.loadmsh("mesh-HFUN.msh", hfun)
     
 
@@ -43,8 +43,6 @@ def gis(src_path, dst_path):
 
     opts.mesh_top1 = True
     opts.geom_feat = True
-    opts.geom_eta1 = float(+5.0)
-    opts.geom_eta2 = float(+5.0)
 
     jigsawpy.lib.jigsaw(opts, geom, mesh, hfun=hfun)
 
